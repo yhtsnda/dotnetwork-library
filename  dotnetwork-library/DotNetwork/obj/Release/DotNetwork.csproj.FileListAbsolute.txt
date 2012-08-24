@@ -1,0 +1,6 @@
+C:\Users\Szymon\Dropbox\PROJEKTY\DotNetwork\DotNetwork\bin\Release\DotNetwork.dll
+C:\Users\Szymon\Dropbox\PROJEKTY\DotNetwork\DotNetwork\bin\Release\DotNetwork.pdb
+C:\Users\Szymon\Dropbox\PROJEKTY\DotNetwork\DotNetwork\obj\Release\DotNetwork.dll
+C:\Users\Szymon\Dropbox\PROJEKTY\DotNetwork\DotNetwork\obj\Release\DotNetwork.pdb
+C:\Users\Szymon\Dropbox\PROJEKTY\DotNetwork\DotNetwork\bin\Release\DotNetwork.xml
+C:\Users\Szymon\Dropbox\PROJEKTY\DotNetwork\DotNetwork\obj\Release\DotNetwork.csprojResolveAssemblyReference.cache

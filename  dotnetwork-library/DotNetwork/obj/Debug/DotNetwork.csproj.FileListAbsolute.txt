@@ -1,0 +1,5 @@
+C:\Users\Szymon\Dropbox\PROJEKTY\DotNetwork\DotNetwork\bin\Debug\DotNetwork.dll
+C:\Users\Szymon\Dropbox\PROJEKTY\DotNetwork\DotNetwork\bin\Debug\DotNetwork.pdb
+C:\Users\Szymon\Dropbox\PROJEKTY\DotNetwork\DotNetwork\obj\Debug\DotNetwork.dll
+C:\Users\Szymon\Dropbox\PROJEKTY\DotNetwork\DotNetwork\obj\Debug\DotNetwork.pdb
+C:\Users\Szymon\Dropbox\PROJEKTY\DotNetwork\DotNetwork\bin\Debug\DotNetwork.xml

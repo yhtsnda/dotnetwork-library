@@ -1,0 +1,778 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNetwork</name>
+    </assembly>
+    <members>
+        <member name="T:DotNetwork.Tcp.TcpClientHandler">
+            <summary>
+            Class that represents client
+            </summary>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpClientHandler.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructor of TcpClientHandler
+            </summary>
+            <param name="ip">IP to connect</param>
+            <param name="port">Port to connect</param>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpClientHandler.#ctor(System.Net.IPAddress,System.Int32)">
+            <summary>
+            Constructor of TcpClientHandler
+            </summary>
+            <param name="ip">IP to connect</param>
+            <param name="port">Port to connect</param>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpClientHandler.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            Constructor of TcpClientHandler
+            </summary>
+            <param name="ip">IP to connect</param>
+            <param name="port">Port to connect</param>
+            <param name="bufferSize">Max receive buffer size</param>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpClientHandler.#ctor(System.Net.IPAddress,System.Int32,System.Int32)">
+            <summary>
+            Constructor of TcpClientHandler
+            </summary>
+            <param name="ip">IP to connect</param>
+            <param name="port">Port to connect</param>
+            <param name="bufferSize">Max receive buffer size</param>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpClientHandler.Connect">
+            <summary>
+            Try to connect to server specified in constructor
+            </summary>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpClientHandler.Disconnect">
+            <summary>
+            Disconnects from server
+            </summary>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpClientHandler.Send(System.Byte[])">
+            <summary>
+            Sends data to server
+            </summary>
+            <param name="data">Data to sent</param>
+        </member>
+        <member name="E:DotNetwork.Tcp.TcpClientHandler.OnConnected">
+            <summary>
+            Performed when client successful connected to server
+            </summary>
+        </member>
+        <member name="E:DotNetwork.Tcp.TcpClientHandler.OnDisconnected">
+            <summary>
+            Performed when client disconnected from server
+            </summary>
+        </member>
+        <member name="E:DotNetwork.Tcp.TcpClientHandler.OnMessageReceived">
+            <summary>
+            Performed when message arrives
+            </summary>
+        </member>
+        <member name="E:DotNetwork.Tcp.TcpClientHandler.OnErrorOccurred">
+            <summary>
+            Performed when error occurred
+            </summary>
+        </member>
+        <member name="T:DotNetwork.ClientInfo">
+            <summary>
+            Class that represents client
+            </summary>
+        </member>
+        <member name="F:DotNetwork.ClientInfo.ClientResources">
+            <summary>
+            Connection information. Content isn't visible outside.
+            </summary>
+        </member>
+        <member name="M:DotNetwork.ClientInfo.#ctor">
+            <summary>
+            Constructor of ClientInfo
+            </summary>
+        </member>
+        <member name="P:DotNetwork.ClientInfo.IP">
+            <summary>
+            Client IP
+            </summary>
+        </member>
+        <member name="T:DotNetwork.ClientInfo.ClientResourcesStruct">
+            <summary>
+            Structure to store technical data about client.
+            </summary>
+        </member>
+        <member name="T:DotNetwork.PacketWriter">
+            <summary>
+            Class to write data packets
+            </summary>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.#ctor(System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="bufferSize">Sets buffer size. Default is 8192 bytes</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.Boolean)">
+            <summary>
+            Writes boolean
+            </summary>
+            <param name="value">Boolean to write</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.Byte)">
+            <summary>
+            Writes single byte
+            </summary>
+            <param name="value">Byte to write</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.Byte[])">
+            <summary>
+            Writes bytes
+            </summary>
+            <param name="buffer">Bytes to write</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.Char)">
+            <summary>
+            Writes single character
+            </summary>
+            <param name="ch">Character to write</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.Char[])">
+            <summary>
+            Writes characters
+            </summary>
+            <param name="chars">Characters to write</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.Decimal)">
+            <summary>
+            Writes decimal
+            </summary>
+            <param name="value">Decimal to write</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.Double)">
+            <summary>
+            Writes double
+            </summary>
+            <param name="value">Double to write</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.Single)">
+            <summary>
+            Writes float
+            </summary>
+            <param name="value">Float to write</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.Int32)">
+            <summary>
+            Writes int
+            </summary>
+            <param name="value">Int to write</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.Int64)">
+            <summary>
+            Writes long
+            </summary>
+            <param name="value">Long to write</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.SByte)">
+            <summary>
+            Writes sbyte
+            </summary>
+            <param name="value">SByte to write</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.Int16)">
+            <summary>
+            Writes short
+            </summary>
+            <param name="value">Short to write</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.String)">
+            <summary>
+            Writes string
+            </summary>
+            <param name="value">String to write</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.UInt32)">
+            <summary>
+            Writes unsigned int
+            </summary>
+            <param name="value">Unsigned int to write</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.UInt64)">
+            <summary>
+            Writes unsigned long
+            </summary>
+            <param name="value">Unsigned long to write</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.UInt16)">
+            <summary>
+            Writes unsigned short
+            </summary>
+            <param name="value">Unsigned short to write</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes the specified bytes from specified buffer
+            </summary>
+            <param name="buffer">Buffer</param>
+            <param name="index">Start position</param>
+            <param name="count">Bytes count</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Write(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Writes the specified characters from specified buffer
+            </summary>
+            <param name="chars">Buffer</param>
+            <param name="index">Start position</param>
+            <param name="count">Characters count</param>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Close">
+            <summary>
+            Closes the writer
+            </summary>
+        </member>
+        <member name="M:DotNetwork.PacketWriter.Dispose">
+            <summary>
+            Disposes this object
+            </summary>
+        </member>
+        <member name="P:DotNetwork.PacketWriter.Data">
+            <summary>
+            Buffer to write data
+            </summary>
+        </member>
+        <member name="P:DotNetwork.PacketWriter.BaseStream">
+            <summary>
+            Base Stream
+            </summary>
+        </member>
+        <member name="P:DotNetwork.PacketWriter.BaseWriter">
+            <summary>
+            Base BinaryWriter
+            </summary>
+        </member>
+        <member name="T:DotNetwork.PacketReader">
+            <summary>
+            Class to read data packets
+            </summary>
+        </member>
+        <member name="F:DotNetwork.PacketReader.Data">
+            <summary>
+            Content
+            </summary>
+        </member>
+        <member name="M:DotNetwork.PacketReader.#ctor(System.Byte[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="data">Data to read</param>
+        </member>
+        <member name="M:DotNetwork.PacketReader.PeekChar">
+            <summary>
+            Reads the next char
+            </summary>
+            <returns>Returns the next avaiable character and does not advance the byte or character position</returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.Read">
+            <summary>
+            Read data
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Read the specified number of bytes
+            </summary>
+            <param name="buffer">Buffer to store readed data</param>
+            <param name="index">Start read position</param>
+            <param name="count">Count of bytes from start to read</param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.Read(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Read the specified number of chars
+            </summary>
+            <param name="buffer">Buffer to store readed data</param>
+            <param name="index">Start read position</param>
+            <param name="count">Count of bytes from start to read</param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.ReadBoolean">
+            <summary>
+            Reads boolean
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.ReadByte">
+            <summary>
+            Reads single byte
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.ReadBytes(System.Int32)">
+            <summary>
+            Reads the specified number of bytes
+            </summary>
+            <param name="count">Number of bytes to read</param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.ReadChar">
+            <summary>
+            Reads single character
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.ReadChars(System.Int32)">
+            <summary>
+            Reads the specified number of characters
+            </summary>
+            <param name="count">Number of characters to read</param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.ReadDecimal">
+            <summary>
+            Reads single decimal
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.ReadDouble">
+            <summary>
+            Reads single double
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.ReadInt16">
+            <summary>
+            Reads single short
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.ReadInt32">
+            <summary>
+            Reads single int
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.ReadInt64">
+            <summary>
+            Reads single long
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.ReadSByte">
+            <summary>
+            Reads single sbyte
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.ReadSingle">
+            <summary>
+            Reads single float
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.ReadString">
+            <summary>
+            Reads string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.ReadUInt16">
+            <summary>
+            Reads unsigned short
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.ReadUInt32">
+            <summary>
+            Reads unsigned int
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.ReadUInt64">
+            <summary>
+            Reads unsigned long
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetwork.PacketReader.Close">
+            <summary>
+            Closes the reader
+            </summary>
+        </member>
+        <member name="M:DotNetwork.PacketReader.Dispose">
+            <summary>
+            Disposes this object
+            </summary>
+        </member>
+        <member name="P:DotNetwork.PacketReader.BaseStream">
+            <summary>
+            Base Stream
+            </summary>
+        </member>
+        <member name="P:DotNetwork.PacketReader.BaseReader">
+            <summary>
+            Base BinaryReader
+            </summary>
+        </member>
+        <member name="T:DotNetwork.MessageReceivedHandler">
+            <summary>
+            Delegate
+            </summary>
+            <param name="sender">Sender of event</param>
+            <param name="e">Event arguments - information about packet</param>
+        </member>
+        <member name="T:DotNetwork.ClientActionHandler">
+            <summary>
+            Delegate
+            </summary>
+            <param name="sender">Sender of event</param>
+            <param name="client">Event arguments - client</param>
+        </member>
+        <member name="T:DotNetwork.ErrorHandler">
+            <summary>
+            Delegate
+            </summary>
+            <param name="sender">Sender of event</param>
+            <param name="message">Error message</param>
+            <param name="errortype">Type of error</param>
+        </member>
+        <member name="T:DotNetwork.Udp.UdpHandler">
+            <summary>
+            Class that represents udp client
+            </summary>
+        </member>
+        <member name="M:DotNetwork.Udp.UdpHandler.#ctor(System.Int32)">
+            <summary>
+            Constructor of UdpHandler
+            </summary>
+            <param name="receivePort">Port on which to listen to new messages</param>
+        </member>
+        <member name="M:DotNetwork.Udp.UdpHandler.#ctor(System.Int32,System.String)">
+            <summary>
+            Constructor of UdpHandler
+            </summary>
+            <param name="receivePort">Port on which to listen to new messages</param>
+            <param name="receiveIP">IP on which to listen to new messages</param>
+        </member>
+        <member name="M:DotNetwork.Udp.UdpHandler.#ctor(System.Int32,System.Net.IPAddress)">
+            <summary>
+            Constructor of UdpHandler
+            </summary>
+            <param name="receivePort">Port on which to listen to new messages</param>
+            <param name="receiveIP">IP on which to listen to new messages</param>
+        </member>
+        <member name="M:DotNetwork.Udp.UdpHandler.#ctor(System.Int32,System.String,System.Int32)">
+            <summary>
+            Constructor of UdpHandler
+            </summary>
+            <param name="receivePort">Port on which to listen to new messages</param>
+            <param name="receiveIP">IP on which to listen to new messages</param>
+            <param name="bufferSize">Max receive buffer size</param>
+        </member>
+        <member name="M:DotNetwork.Udp.UdpHandler.#ctor(System.Int32,System.Net.IPAddress,System.Int32)">
+            <summary>
+            Constructor of UdpHandler
+            </summary>
+            <param name="receivePort">Port on which to listen to new messages</param>
+            <param name="receiveIP">IP on which to listen to new messages</param>
+            <param name="bufferSize">Max receive buffer size</param>
+        </member>
+        <member name="M:DotNetwork.Udp.UdpHandler.StartReceiving">
+            <summary>
+            Starts receiving for new messages
+            </summary>
+        </member>
+        <member name="M:DotNetwork.Udp.UdpHandler.StopReceiving">
+            <summary>
+            Stops receiving for new messages
+            </summary>
+        </member>
+        <member name="M:DotNetwork.Udp.UdpHandler.StopReceiving(System.Int32)">
+            <summary>
+            Stops receiving for new messages with specified timeout
+            </summary>
+            <param name="timeout">Timeout to stop receiving</param>
+        </member>
+        <member name="M:DotNetwork.Udp.UdpHandler.Send(System.Net.EndPoint,System.Byte[])">
+            <summary>
+            Sends message to specified end point
+            </summary>
+            <param name="ep">Recipient end point</param>
+            <param name="data">Data to sent</param>
+        </member>
+        <member name="M:DotNetwork.Udp.UdpHandler.Send(System.String,System.Int32,System.Byte[])">
+            <summary>
+            Sends message to specified ip and port
+            </summary>
+            <param name="ip">Recipient IP</param>
+            <param name="port">Recipient port</param>
+            <param name="data">Data to sent</param>
+        </member>
+        <member name="M:DotNetwork.Udp.UdpHandler.Send(System.Net.IPAddress,System.Int32,System.Byte[])">
+            <summary>
+            Sends message to specified ip and port
+            </summary>
+            <param name="ip">Recipient IP</param>
+            <param name="port">Recipient port</param>
+            <param name="data">Data to sent</param>
+        </member>
+        <member name="M:DotNetwork.Udp.UdpHandler.Send(System.String[],System.Int32,System.Byte[])">
+            <summary>
+            Sends message to specified recipients
+            </summary>
+            <param name="ipsOfRecipients">IPs of recipients</param>
+            <param name="recipientPort">Port to send message</param>
+            <param name="data">Data to sent</param>
+        </member>
+        <member name="M:DotNetwork.Udp.UdpHandler.Send(System.Net.IPAddress[],System.Int32,System.Byte[])">
+            <summary>
+            Sends message to specified recipients
+            </summary>
+            <param name="ipsOfRecipients">IPs of recipients</param>
+            <param name="recipientPort">Port to send message</param>
+            <param name="data">Data to sent</param>
+        </member>
+        <member name="M:DotNetwork.Udp.UdpHandler.Send(System.Net.IPEndPoint[],System.Byte[])">
+            <summary>
+            Sends message to specified recipients
+            </summary>
+            <param name="recipients">Array of recipients</param>
+            <param name="data">Data to sent</param>
+        </member>
+        <member name="E:DotNetwork.Udp.UdpHandler.OnMessageReceived">
+            <summary>
+            Performed when message arrives
+            </summary>
+        </member>
+        <member name="E:DotNetwork.Udp.UdpHandler.OnErrorOccurred">
+            <summary>
+            Performed when error occurred
+            </summary>
+        </member>
+        <member name="T:DotNetwork.Tcp.TcpServerHandler">
+            <summary>
+            Class that represents server
+            </summary>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpServerHandler.#ctor(System.Int32)">
+            <summary>
+            Constructor of TcpServerHandler
+            </summary>
+            <param name="port">Port on which server will listening</param>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpServerHandler.#ctor(System.Int32,System.String)">
+            <summary>
+            Constructor of TcpServerHandler
+            </summary>
+            <param name="port">Port on which server will listening</param>
+            <param name="ip">IP on which server will listening</param>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpServerHandler.#ctor(System.Int32,System.Net.IPAddress)">
+            <summary>
+            Constructor of TcpServerHandler
+            </summary>
+            <param name="port">Port on which server will listening</param>
+            <param name="ip">IP on which server will listening</param>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpServerHandler.#ctor(System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            Constructor of TcpServerHandler
+            </summary>
+            <param name="port">Port on which server will listening</param>
+            <param name="ip">IP on which server will listening</param>
+            <param name="bufferSize">Max receive buffer size</param>
+            <param name="maxQueue">Max queue of connecting clients</param>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpServerHandler.#ctor(System.Int32,System.Net.IPAddress,System.Int32,System.Int32)">
+            <summary>
+            Constructor of TcpServerHandler
+            </summary>
+            <param name="port">Port on which server will listening</param>
+            <param name="ip">IP on which server will listening</param>
+            <param name="bufferSize">Max receive buffer size</param>
+            <param name="maxQueue">Max queue of connecting clients</param>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpServerHandler.StartListening">
+            <summary>
+            Starts listening for new clients
+            </summary>
+            <exception cref="T:System.Net.Sockets.SocketException"></exception>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpServerHandler.StopListening">
+            <summary>
+            Stops listening for new clients
+            </summary>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpServerHandler.StopListening(System.Int32)">
+            <summary>
+            Stop listening for new clients with specified timeout
+            </summary>
+            <param name="timeout">Timeout to close socket</param>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpServerHandler.Kick(DotNetwork.ClientInfo)">
+            <summary>
+            Kick specified client from server
+            </summary>
+            <param name="client">Client to kick from server</param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpServerHandler.KickAll">
+            <summary>
+            Kick all connected clients from server
+            </summary>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpServerHandler.Send(DotNetwork.ClientInfo,System.Byte[])">
+            <summary>
+            Sends data to specified client
+            </summary>
+            <param name="client">Message recipient</param>
+            <param name="data">Data to sent</param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpServerHandler.SendToAll(System.Byte[])">
+            <summary>
+            Sends data to all connected clients
+            </summary>
+            <param name="data">Data to sent</param>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpServerHandler.GetClientList">
+            <summary>
+            Get list of connected client
+            </summary>
+            <returns>List of connected clients</returns>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpServerHandler.GetClientsStringIP">
+            <summary>
+            Get string array with connected clients IPs
+            </summary>
+            <returns>String array with connected clients IPs</returns>
+        </member>
+        <member name="M:DotNetwork.Tcp.TcpServerHandler.GetClientsIP">
+            <summary>
+            Get array with connected clients IPs
+            </summary>
+            <returns>Array with connected clients IPs</returns>
+        </member>
+        <member name="E:DotNetwork.Tcp.TcpServerHandler.OnListenStarted">
+            <summary>
+            Performed when server started listening for new clients
+            </summary>
+        </member>
+        <member name="E:DotNetwork.Tcp.TcpServerHandler.OnClientConnected">
+            <summary>
+            Performed when new client connected to server
+            </summary>
+        </member>
+        <member name="E:DotNetwork.Tcp.TcpServerHandler.OnClientDisconnected">
+            <summary>
+            Performed when client disconnected from server
+            </summary>
+        </member>
+        <member name="E:DotNetwork.Tcp.TcpServerHandler.OnMessageReceived">
+            <summary>
+            Performed when message arrives
+            </summary>
+        </member>
+        <member name="E:DotNetwork.Tcp.TcpServerHandler.OnErrorOccurred">
+            <summary>
+            Performed when error occurred
+            </summary>
+        </member>
+        <member name="T:DotNetwork.PacketEventArgs">
+            <summary>
+            Class that represents arrived packet
+            </summary>
+        </member>
+        <member name="F:DotNetwork.PacketEventArgs.Data">
+            <summary>
+            Message content
+            </summary>
+        </member>
+        <member name="F:DotNetwork.PacketEventArgs.DataLength">
+            <summary>
+            Length of message
+            </summary>
+        </member>
+        <member name="F:DotNetwork.PacketEventArgs.Sender">
+            <summary>
+            Sender of message
+            </summary>
+        </member>
+        <member name="M:DotNetwork.PacketEventArgs.#ctor(System.Byte[],System.Int32,DotNetwork.ClientInfo)">
+            <summary>
+            Constructor of PacketEventArgs
+            </summary>
+            <param name="data">Data</param>
+            <param name="dataLength">Length of data</param>
+            <param name="sender">Sender of packet</param>
+        </member>
+        <member name="T:DotNetwork.Error">
+            <summary>
+            Enum that repreents errors
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.Undefinied">
+            <summary>
+            Undefinied error
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.BadIP">
+            <summary>
+            Bad IP
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.BadPort">
+            <summary>
+            Bad port
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.BadBufferSize">
+            <summary>
+            Bad buffer size
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.ConnectingFailed">
+            <summary>
+            Error while connecting
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.SocketNotCreated">
+            <summary>
+            Socket is not created
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.DisconnectingFailed">
+            <summary>
+            Error while disconnecting
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.SendingMessageFailed">
+            <summary>
+            Error while sending message
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.ListeningFailed">
+            <summary>
+            Error while listening
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.KickFailed">
+            <summary>
+            Error while kicking client
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.ReceivingFailed">
+            <summary>
+            Error while receiving failed
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.SocketBindError">
+            <summary>
+            Error while socket binding
+            </summary>
+        </member>
+    </members>
+</doc>
