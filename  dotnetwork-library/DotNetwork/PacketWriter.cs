@@ -1,6 +1,6 @@
 ﻿/*
  * AUTHOR: Utermiko
- * Modified by: <none>eee
+ * Modified by: <none>
  */
 
 using System;
