@@ -45,6 +45,7 @@
     <Compile Include="ClientInfo.cs" />
     <Compile Include="Delegates.cs" />
     <Compile Include="ErrorEnum.cs" />
+    <Compile Include="Http\HttpRequestHandler.cs" />
     <Compile Include="PacketEventArgs.cs" />
     <Compile Include="PacketReader.cs" />
     <Compile Include="PacketWriter.cs" />

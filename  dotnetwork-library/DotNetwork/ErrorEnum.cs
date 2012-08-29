@@ -58,5 +58,25 @@ namespace DotNetwork
         /// Error while socket binding
         /// </summary>
         SocketBindError,
+        /// <summary>
+        /// The remote name could not be resolved
+        /// </summary>
+        RemoteNotResolved,
+        /// <summary>
+        /// Request was not sent to remote
+        /// </summary>
+        RequestNotSent,
+        /// <summary>
+        /// Null object
+        /// </summary>
+        NullError,
+        /// <summary>
+        /// Bad parametr
+        /// </summary>
+        BadParametr,
+        /// <summary>
+        /// Bad URI
+        /// </summary>
+        BadUri,
     }
 }

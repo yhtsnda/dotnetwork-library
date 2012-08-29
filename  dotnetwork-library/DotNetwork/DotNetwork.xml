@@ -709,6 +709,111 @@
             <param name="dataLength">Length of data</param>
             <param name="sender">Sender of packet</param>
         </member>
+        <member name="T:DotNetwork.Http.HttpRequestHandler">
+            <summary>
+            Class that represents Http Request
+            </summary>
+        </member>
+        <member name="M:DotNetwork.Http.HttpRequestHandler.#ctor(System.String)">
+            <summary>
+            Constructor of HttpRequestHandler
+            </summary>
+            <param name="uri">The URI that indentifies the Internet resource</param>
+        </member>
+        <member name="M:DotNetwork.Http.HttpRequestHandler.#ctor(System.String,System.String)">
+            <summary>
+            Constructor of HttpRequestHandler
+            </summary>
+            <param name="uri">The URI that indentifies the Internet resource</param>
+            <param name="userAgent">User agent. Default is "DotNetwork Agent"</param>
+        </member>
+        <member name="M:DotNetwork.Http.HttpRequestHandler.#ctor(System.Uri)">
+            <summary>
+            Constructor of HttpRequestHandler
+            </summary>
+            <param name="uri">The URI that indentifies the Internet resource</param>
+        </member>
+        <member name="M:DotNetwork.Http.HttpRequestHandler.#ctor(System.Uri,System.String)">
+            <summary>
+            Constructor of HttpRequestHandler
+            </summary>
+            <param name="uri">The URI that indentifies the Internet resource</param>
+            <param name="userAgent">User agent. Default is "DotNetwork Agent"</param>
+        </member>
+        <member name="M:DotNetwork.Http.HttpRequestHandler.#ctor(System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Constructor of HttpRequestHandler
+            </summary>
+            <param name="hostName">Host name</param>
+            <param name="path">Path to file</param>
+            <param name="port">Port</param>
+            <param name="userName">User name</param>
+            <param name="password">Password</param>
+        </member>
+        <member name="M:DotNetwork.Http.HttpRequestHandler.#ctor(System.String,System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Constructor of HttpRequestHandler
+            </summary>
+            <param name="hostName">Host name</param>
+            <param name="path">Path to file</param>
+            <param name="port">Port</param>
+            <param name="userName">User name</param>
+            <param name="password">Password</param>
+            <param name="userAgent">User agent. Default is "DotNetwork Agent"</param>
+        </member>
+        <member name="M:DotNetwork.Http.HttpRequestHandler.AddGetParametr(System.String,System.String)">
+            <summary>
+            Adds GET parametr
+            </summary>
+            <param name="name">Name of parametr</param>
+            <param name="value">Value of parametr</param>
+        </member>
+        <member name="M:DotNetwork.Http.HttpRequestHandler.AddPostParametr(System.String,System.String)">
+            <summary>
+            Adds POST parametr
+            </summary>
+            <param name="name">Name of parametr</param>
+            <param name="value">Value of parametr</param>
+        </member>
+        <member name="M:DotNetwork.Http.HttpRequestHandler.SendRequest">
+            <summary>
+            Sends request
+            </summary>
+        </member>
+        <member name="M:DotNetwork.Http.HttpRequestHandler.GetResponse">
+            <summary>
+            Gets response
+            </summary>
+            <returns>Stream of response data</returns>
+        </member>
+        <member name="M:DotNetwork.Http.HttpRequestHandler.SendRequestAndGetResponse">
+            <summary>
+            Sends request and after that get response
+            </summary>
+            <returns>Stream of response data</returns>
+        </member>
+        <member name="M:DotNetwork.Http.HttpRequestHandler.ReadFromStream(System.IO.Stream)">
+            <summary>
+            Reads data from stream
+            </summary>
+            <param name="stream">Stream from which to read data</param>
+            <returns>Read string</returns>
+        </member>
+        <member name="M:DotNetwork.Http.HttpRequestHandler.Dispose">
+            <summary>
+            Disposes this object
+            </summary>
+        </member>
+        <member name="P:DotNetwork.Http.HttpRequestHandler.UriToRequest">
+            <summary>
+            The URI that indentifies the Internet resource
+            </summary>
+        </member>
+        <member name="E:DotNetwork.Http.HttpRequestHandler.OnErrorOccurred">
+            <summary>
+            Performed when error occurred
+            </summary>
+        </member>
         <member name="T:DotNetwork.Error">
             <summary>
             Enum that repreents errors
@@ -772,6 +877,31 @@
         <member name="F:DotNetwork.Error.SocketBindError">
             <summary>
             Error while socket binding
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.RemoteNotResolved">
+            <summary>
+            The remote name could not be resolved
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.RequestNotSent">
+            <summary>
+            Request was not sent to remote
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.NullError">
+            <summary>
+            Null object
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.BadParametr">
+            <summary>
+            Bad parametr
+            </summary>
+        </member>
+        <member name="F:DotNetwork.Error.BadUri">
+            <summary>
+            Bad URI
             </summary>
         </member>
     </members>
